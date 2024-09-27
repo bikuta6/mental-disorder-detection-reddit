@@ -1,0 +1,48 @@
+1. Carga y Exploración del Dataset
+Importa el dataset: Usa pandas para cargar el dataset y revisar las primeras filas con df.head().
+Exploración inicial: Revisa la estructura del dataset, comprueba si hay valores nulos o categorías desbalanceadas, y obtén un resumen general con df.info() y df.describe().
+
+2. Preprocesamiento del Texto
+Limpieza de los títulos y textos: Elimina caracteres especiales, convierte el texto a minúsculas y remueve stop words utilizando librerías como nltk o spaCy.
+Tokenización y lematización: Convierte los textos a tokens y luego aplica lematización para normalizar las palabras.
+Análisis de longitud: Estudia la longitud de los títulos y textos para entender la cantidad de palabras promedio por post.
+
+3. Análisis Exploratorio de Datos (EDA)
+Distribución por subreddits: Cuenta el número de posts por subreddit para ver si algunos están más representados que otros.
+Distribución temporal: Si tienes la fecha y hora del post, analiza la distribución temporal (ej. posts por día/mes o en diferentes momentos del día).
+Distribución por NSFW (mayores de 18): Revisa cuántos posts están marcados como NSFW para ver si existe alguna relación con el contenido.
+
+4. Análisis de Sentimientos
+Aplicación de un análisis de sentimientos: Utiliza una herramienta como VADER o TextBlob para analizar los sentimientos (positivo, negativo, neutral) de los títulos y textos.
+¿Cómo cambian los sentimientos según el subreddit o categoría?: Realiza un análisis para observar cómo varían los sentimientos según la enfermedad mental asociada al subreddit.
+Detección de emociones: Usa un modelo como RoBERTa o DistilBERT preentrenado para identificar emociones como tristeza, ansiedad, enojo, etc.
+
+5. Clasificación de Posts
+Clasificación binaria/multiclase: Si tienes varios subreddits representando diferentes enfermedades mentales, podrías aplicar técnicas de clasificación de texto para predecir a qué subreddit pertenece un post.
+Modelos: Algoritmos como Naive Bayes, SVM, o redes neuronales como BERT pueden ser útiles.
+Predicción NSFW: Un enfoque podría ser entrenar un modelo para predecir si un post debe ser marcado como NSFW basado en el texto.
+
+6. Modelos de Topic Modeling
+Latent Dirichlet Allocation (LDA): Implementa LDA para identificar temas recurrentes en los posts y asociarlos con subreddits específicos.
+Visualización con pyLDAvis: Puedes usar pyLDAvis para visualizar los temas identificados y su distribución en los posts.
+
+7. Detección de Tendencias Temporales
+Temporal Analysis: Si tienes la variable temporal, podrías realizar un análisis de tendencias para detectar cambios en la actividad de los usuarios a lo largo del tiempo.
+Detección de picos de actividad: Identifica si existen momentos clave donde el volumen de posts sobre ciertos temas (como la ansiedad o la depresión) aumenta o disminuye.
+
+8. Detección de Patrones y Correlaciones
+Relación entre subreddit y sentimientos: Examina si ciertos subreddits están más asociados con sentimientos específicos (por ejemplo, más posts negativos en el subreddit de depresión).
+Relación entre NSFW y el contenido: Analiza si los posts marcados como NSFW tienen un sentimiento o temática recurrente diferente a los posts no NSFW.
+
+9. Visualización de Resultados
+Word Cloud: Usa una nube de palabras para visualizar los términos más frecuentes por subreddit o categoría.
+Gráficos de barras y líneas: Visualiza las distribuciones de los sentimientos, categorías y número de posts por mes o semana.
+TSNE o PCA: Aplica técnicas de reducción de dimensionalidad como TSNE o PCA para visualizar los clusters de temas o sentimientos.
+
+Librerías útiles:
+pandas: para la manipulación de datos.
+nltk, spaCy, TextBlob: para preprocesamiento de texto y análisis de sentimientos.
+matplotlib, seaborn, wordcloud: para la visualización de datos.
+scikit-learn: para modelos de clasificación.
+transformers: para usar modelos preentrenados como BERT.
+Este enfoque te permitirá obtener insights sobre el comportamiento de los usuarios, la naturaleza de los posts y las emociones prevalentes en los subreddits dedicados a diferentes enfermedades mentales.
